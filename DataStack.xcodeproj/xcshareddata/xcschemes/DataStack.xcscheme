@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "257B75DC1F45F58D006344A0"
-               BuildableName = "Data.framework"
-               BlueprintName = "Data"
-               ReferencedContainer = "container:Data.xcodeproj">
+               BlueprintIdentifier = "250039421F46141E000EAADC"
+               BuildableName = "DataStack.framework"
+               BlueprintName = "DataStack"
+               ReferencedContainer = "container:DataStack.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,20 +33,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "257B75E51F45F58D006344A0"
-               BuildableName = "DataTests.xctest"
-               BlueprintName = "DataTests"
-               ReferencedContainer = "container:Data.xcodeproj">
+               BlueprintIdentifier = "2500394B1F46141E000EAADC"
+               BuildableName = "DataStackTests.xctest"
+               BlueprintName = "DataStackTests"
+               ReferencedContainer = "container:DataStack.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "257B75DC1F45F58D006344A0"
-            BuildableName = "Data.framework"
-            BlueprintName = "Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "250039421F46141E000EAADC"
+            BuildableName = "DataStack.framework"
+            BlueprintName = "DataStack"
+            ReferencedContainer = "container:DataStack.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,10 +66,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "257B75DC1F45F58D006344A0"
-            BuildableName = "Data.framework"
-            BlueprintName = "Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "250039421F46141E000EAADC"
+            BuildableName = "DataStack.framework"
+            BlueprintName = "DataStack"
+            ReferencedContainer = "container:DataStack.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,10 +84,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "257B75DC1F45F58D006344A0"
-            BuildableName = "Data.framework"
-            BlueprintName = "Data"
-            ReferencedContainer = "container:Data.xcodeproj">
+            BlueprintIdentifier = "250039421F46141E000EAADC"
+            BuildableName = "DataStack.framework"
+            BlueprintName = "DataStack"
+            ReferencedContainer = "container:DataStack.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

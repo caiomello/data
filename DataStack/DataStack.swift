@@ -1,6 +1,6 @@
 //
 //  DataStack.swift
-//  Data
+//  DataStack
 //
 //  Created by Caio Mello on August 17, 2017.
 //  Copyright © 2017 Caio Mello. All rights reserved.
