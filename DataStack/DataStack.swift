@@ -28,7 +28,7 @@ public final class DataStack {
 		return container
 	}()
 	
-	private(set) lazy var mainContext: NSManagedObjectContext = {
+	public private(set) lazy var mainContext: NSManagedObjectContext = {
 		self.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
 		self.persistentContainer.viewContext.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
 		return self.persistentContainer.viewContext
