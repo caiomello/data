@@ -10,14 +10,14 @@ import Foundation
 import CoreData
 
 public final class DataStack {
-	private let modelName: String
-	
-	public init(modelName: String) {
-		self.modelName = modelName
-	}
+	private let model: String
+
+    public init(model: String) {
+        self.model = model
+    }
 	
 	private lazy var persistentContainer: NSPersistentContainer = {
-		let container = NSPersistentContainer(name: self.modelName)
+		let container = NSPersistentContainer(name: model)
 		
 		container.loadPersistentStores(completionHandler: { (description, error) in
 			if let error = error {
@@ -31,12 +31,12 @@ public final class DataStack {
 	}()
 	
 	public private(set) lazy var viewContext: NSManagedObjectContext = {
-		self.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-		self.persistentContainer.viewContext.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
-		return self.persistentContainer.viewContext
+		persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+		persistentContainer.viewContext.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
+		return persistentContainer.viewContext
 	}()
 	
-	public func performBackgroundTask(block: @escaping (NSManagedObjectContext) -> Void) {
+    public func performBackgroundTask(block: @escaping (NSManagedObjectContext) -> Void) {
 		persistentContainer.performBackgroundTask { (context) in
 			context.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
 			block(context)
