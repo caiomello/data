@@ -10,12 +10,14 @@ import Foundation
 
 extension URL {
     init(endpoint: Endpoint) {
+        guard let endpointURL = endpoint.url else { fatalError("Endpoint has no URL") }
+
         let url: String = {
             if let parameters = endpoint.parameters {
-                return endpoint.url + "?" + parameters.queryString()
+                return endpointURL + "?" + parameters.queryString()
             }
 
-            return endpoint.url
+            return endpointURL
         }()
 
         self.init(string: url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!

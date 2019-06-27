@@ -9,6 +9,6 @@
 import Foundation
 
 public protocol Endpoint {
-    var url: String { get }
+    var url: String? { get }
     var parameters: [String: String]? { get }
 }
