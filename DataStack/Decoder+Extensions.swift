@@ -10,12 +10,11 @@ import Foundation
 import CoreData
 
 extension CodingUserInfoKey {
-    static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")
+    static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")!
 }
 
 extension Decoder {
     public func managedObjectContext() -> NSManagedObjectContext? {
-        guard let managedObjectContextKey = CodingUserInfoKey.managedObjectContext else { return nil }
-        return userInfo[managedObjectContextKey] as? NSManagedObjectContext
+        return userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext
     }
 }
