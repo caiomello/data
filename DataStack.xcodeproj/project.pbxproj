@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2500394D1F46141E000EAADC /* DataStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250039431F46141E000EAADC /* DataStack.framework */; };
 		2500395E1F461453000EAADC /* DataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2500395D1F461453000EAADC /* DataStack.swift */; };
+		252DB61B22C57DE1000A332F /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252DB61A22C57DE1000A332F /* JSONDecoder+Extensions.swift */; };
+		252DB61D22C57DF5000A332F /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252DB61C22C57DF5000A332F /* URL+Extensions.swift */; };
+		252DB61F22C57E01000A332F /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252DB61E22C57E01000A332F /* URLRequest+Extensions.swift */; };
+		252DB62122C57E8C000A332F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252DB62022C57E8C000A332F /* Endpoint.swift */; };
 		25CB5A0D22B94F5400AB4E5B /* Decoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CB5A0C22B94F5400AB4E5B /* Decoder+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,10 @@
 		2500394C1F46141E000EAADC /* DataStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		250039531F46141E000EAADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2500395D1F461453000EAADC /* DataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStack.swift; sourceTree = "<group>"; };
+		252DB61A22C57DE1000A332F /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		252DB61C22C57DF5000A332F /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		252DB61E22C57E01000A332F /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		252DB62022C57E8C000A332F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		25CB5A0C22B94F5400AB4E5B /* Decoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoder+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +81,10 @@
 			children = (
 				2500395D1F461453000EAADC /* DataStack.swift */,
 				25CB5A0C22B94F5400AB4E5B /* Decoder+Extensions.swift */,
+				252DB62022C57E8C000A332F /* Endpoint.swift */,
+				252DB61A22C57DE1000A332F /* JSONDecoder+Extensions.swift */,
+				252DB61C22C57DF5000A332F /* URL+Extensions.swift */,
+				252DB61E22C57E01000A332F /* URLRequest+Extensions.swift */,
 				250039471F46141E000EAADC /* Info.plist */,
 			);
 			path = DataStack;
@@ -198,6 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CB5A0D22B94F5400AB4E5B /* Decoder+Extensions.swift in Sources */,
+				252DB61D22C57DF5000A332F /* URL+Extensions.swift in Sources */,
+				252DB61B22C57DE1000A332F /* JSONDecoder+Extensions.swift in Sources */,
+				252DB61F22C57E01000A332F /* URLRequest+Extensions.swift in Sources */,
+				252DB62122C57E8C000A332F /* Endpoint.swift in Sources */,
 				2500395E1F461453000EAADC /* DataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
