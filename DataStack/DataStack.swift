@@ -21,8 +21,10 @@ public final class DataStack {
 		
 		container.loadPersistentStores(completionHandler: { (description, error) in
 			if let error = error {
-				print("Error loading persistent store: \(error)")
-			}
+				print("Failed to load persistent store: \(error)")
+            } else {
+                print("Loaded persistent store: \(description)")
+            }
 		})
 		
 		return container
@@ -45,8 +47,9 @@ public final class DataStack {
 		if context.hasChanges {
 			do {
 				try context.save()
+                print("Context saved: \(context)")
 			} catch {
-				print("Error saving to persistent store: \(error)")
+				print("Failed to save to persistent store: \(error)")
 			}
 		}
 	}
