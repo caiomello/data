@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension JSONDecoder {
-    public convenience init(dateFormat: String? = nil, context: NSManagedObjectContext? = nil) {
+    public convenience init(dateFormat: String? = nil, context: NSManagedObjectContext? = nil, existingEntityIdentifier: Int? = nil) {
         self.init()
 
         if let dateFormat = dateFormat {
@@ -21,6 +21,10 @@ extension JSONDecoder {
 
         if let context = context {
             userInfo[CodingUserInfoKey.managedObjectContext] = context
+        }
+
+        if let existingEntityIdentifier = existingEntityIdentifier {
+            userInfo[CodingUserInfoKey.existingEntityIdentifier] = existingEntityIdentifier
         }
     }
 }
