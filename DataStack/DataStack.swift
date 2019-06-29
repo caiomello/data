@@ -9,40 +9,26 @@
 import Foundation
 import CoreData
 
-public final class DataStack {
+public struct DataStack {
 	private let model: String
 
-    public init(model: String) {
-        self.model = model
-    }
-	
 	private lazy var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: model)
-		
+
 		container.loadPersistentStores(completionHandler: { (description, error) in
 			if let error = error {
-				print("Failed to load persistent store: \(error)")
-            } else {
-                print("Loaded persistent store: \(description)")
+                fatalError("Failed to load persistent store: \(error)")
             }
+
+            container.viewContext.automaticallyMergesChangesFromParent = true
+            container.viewContext.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
 		})
-		
+
 		return container
 	}()
-	
-	public private(set) lazy var viewContext: NSManagedObjectContext = {
-		persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-		persistentContainer.viewContext.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
-		return persistentContainer.viewContext
-	}()
-	
-    public func performBackgroundTask(block: @escaping (NSManagedObjectContext) -> Void) {
-		persistentContainer.performBackgroundTask { (context) in
-			context.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
-			block(context)
-		}
-	}
-	
+
+    public private(set) lazy var viewContext: NSManagedObjectContext = persistentContainer.viewContext
+
 	public func save(_ context: NSManagedObjectContext) {
 		if context.hasChanges {
 			do {
