@@ -15,6 +15,7 @@ extension JSONDecoder {
 
         if let dateFormat = dateFormat {
             let dateFormatter = DateFormatter()
+            dateFormatter.isLenient = true
             dateFormatter.dateFormat = dateFormat
             dateDecodingStrategy = .formatted(dateFormatter)
         }
