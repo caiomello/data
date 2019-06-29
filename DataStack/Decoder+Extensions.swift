@@ -19,7 +19,7 @@ extension Decoder {
         return userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext
     }
 
-    func existingEntityIdentifier() -> Int? {
+    public func existingEntityIdentifier() -> Int? {
         return userInfo[CodingUserInfoKey.existingEntityIdentifier] as? Int
     }
 }
