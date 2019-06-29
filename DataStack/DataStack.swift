@@ -34,7 +34,10 @@ public final class DataStack {
     public private(set) lazy var viewContext: NSManagedObjectContext = persistentContainer.viewContext
 
     public func performBackgroundTask(block: @escaping (NSManagedObjectContext) -> Void) {
-        persistentContainer.performBackgroundTask(block)
+        persistentContainer.performBackgroundTask { context in
+            context.mergePolicy = NSMergePolicy(merge: .mergeByPropertyObjectTrumpMergePolicyType)
+            block(context)
+        }
     }
 
 	public func save(_ context: NSManagedObjectContext) {
