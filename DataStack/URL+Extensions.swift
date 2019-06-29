@@ -10,7 +10,7 @@ import Foundation
 
 extension URL {
     init(endpoint: Endpoint) {
-        guard let endpointURL = endpoint.url else { fatalError("Endpoint has no URL") }
+        guard let endpointURL = endpoint.url else { fatalError("Data - Endpoint has no URL") }
 
         let url: String = {
             if let parameters = endpoint.parameters {

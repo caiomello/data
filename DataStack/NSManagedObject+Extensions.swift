@@ -18,7 +18,7 @@ extension NSManagedObject {
         do {
             return try context.fetch(fetchRequest)
         } catch {
-            print("Failed to execute fetch request: \(error)")
+            print("Data - Failed to execute fetch request: \(error)")
             return []
         }
     }

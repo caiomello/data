@@ -21,7 +21,7 @@ public final class DataStack {
 
 		container.loadPersistentStores(completionHandler: { (description, error) in
 			if let error = error {
-                fatalError("Failed to load persistent store: \(error)")
+                fatalError("Data - Failed to load persistent store: \(error)")
             }
 
             container.viewContext.automaticallyMergesChangesFromParent = true
@@ -44,9 +44,9 @@ public final class DataStack {
 		if context.hasChanges {
 			do {
 				try context.save()
-                print("Context saved: \(context)")
+                print(context == persistentContainer.viewContext ? "Data - View context saved" : "Data - Background context saved")
 			} catch {
-				print("Failed to save to persistent store: \(error)")
+				print("Data - Failed to save to persistent store: \(error)")
 			}
 		}
 	}
