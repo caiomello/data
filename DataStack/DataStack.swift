@@ -9,8 +9,12 @@
 import Foundation
 import CoreData
 
-public struct DataStack {
+public final class DataStack {
 	private let model: String
+
+    public init(model: String) {
+        self.model = model
+    }
 
 	private lazy var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentContainer(name: model)
@@ -28,6 +32,10 @@ public struct DataStack {
 	}()
 
     public private(set) lazy var viewContext: NSManagedObjectContext = persistentContainer.viewContext
+
+    public func performBackgroundTask(block: @escaping (NSManagedObjectContext) -> Void) {
+        persistentContainer.performBackgroundTask(block)
+    }
 
 	public func save(_ context: NSManagedObjectContext) {
 		if context.hasChanges {
