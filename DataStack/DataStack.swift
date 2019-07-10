@@ -21,10 +21,12 @@ public final class DataStack {
 	private lazy var persistentContainer: NSPersistentContainer = {
 		let container = NSPersistentCloudKitContainer(name: model)
 
-        let local = NSPersistentStoreDescription(url: URL(fileURLWithPath: "/files/local.sqlite"))
+        let localURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!.appendingPathComponent("local.sqlite")
+        let local = NSPersistentStoreDescription(url: localURL)
         local.configuration = "Local"
 
-        let cloud = NSPersistentStoreDescription(url: URL(fileURLWithPath: "/files/cloud.sqlite"))
+        let cloudURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!.appendingPathComponent("cloud.sqlite")
+        let cloud = NSPersistentStoreDescription(url: cloudURL)
         cloud.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: cloudKitContainer)
         cloud.configuration = "Cloud"
 
