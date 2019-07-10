@@ -11,13 +11,24 @@ import CoreData
 
 public final class DataStack {
 	private let model: String
+    private let cloudKitContainer: String
 
-    public init(model: String) {
+    public init(model: String, cloudKitContainer: String) {
         self.model = model
+        self.cloudKitContainer = cloudKitContainer
     }
 
 	private lazy var persistentContainer: NSPersistentContainer = {
-		let container = NSPersistentContainer(name: model)
+		let container = NSPersistentCloudKitContainer(name: model)
+
+        let local = NSPersistentStoreDescription(url: URL(fileURLWithPath: "/files/local.sqlite"))
+        local.configuration = "Local"
+
+        let cloud = NSPersistentStoreDescription(url: URL(fileURLWithPath: "/files/cloud.sqlite"))
+        cloud.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: cloudKitContainer)
+        cloud.configuration = "Cloud"
+
+        container.persistentStoreDescriptions = [local, cloud]
 
 		container.loadPersistentStores(completionHandler: { (description, error) in
 			if let error = error {
