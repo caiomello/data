@@ -22,11 +22,4 @@ extension NSManagedObject {
             return []
         }
     }
-
-    public class func fetchRequest<T: NSManagedObject>(withPredicate predicate: NSPredicate? = nil, sortDescriptors: [NSSortDescriptor]? = nil) -> NSFetchRequest<T> {
-        let fetchRequest = NSFetchRequest<T>(entityName: T.entity().name!)
-        fetchRequest.predicate = predicate
-        fetchRequest.sortDescriptors = sortDescriptors
-        return fetchRequest
-    }
 }
