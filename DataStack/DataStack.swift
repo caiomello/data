@@ -57,7 +57,7 @@ public final class DataStack {
 		if context.hasChanges {
 			do {
 				try context.save()
-                print(context == persistentContainer.viewContext ? "Data - View context saved" : "Data - Background context saved")
+                print(context.concurrencyType == .mainQueueConcurrencyType ? "Data - View context saved" : "Data - Background context saved")
 			} catch {
 				print("Data - Failed to save to persistent store: \(error)")
 			}
