@@ -53,14 +53,25 @@ public final class DataStack {
         }
     }
 
-	public func save(_ context: NSManagedObjectContext) {
+	public func saveBackgroundContext(_ context: NSManagedObjectContext) {
 		if context.hasChanges {
 			do {
 				try context.save()
-                print(context.concurrencyType == .mainQueueConcurrencyType ? "Data - View context saved" : "Data - Background context saved")
+                print("Data - Background context saved")
 			} catch {
-				print("Data - Failed to save to persistent store: \(error)")
+				print("Data - Failed to save background context to persistent store: \(error)")
 			}
 		}
 	}
+
+    public func saveViewContext() {
+        if viewContext.hasChanges {
+            do {
+                try viewContext.save()
+                print("Data - View context saved")
+            } catch {
+                print("Data - Failed to save view context to persistent store: \(error)")
+            }
+        }
+    }
 }
