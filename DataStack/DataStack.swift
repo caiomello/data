@@ -61,7 +61,9 @@ public final class DataStack {
 			} catch {
 				print("Data - Failed to save background context to persistent store: \(error)")
 			}
-		}
+        } else {
+            print("Data - Save background context - No changes to save")
+        }
 	}
 
     public func saveViewContext() {
@@ -72,6 +74,8 @@ public final class DataStack {
             } catch {
                 print("Data - Failed to save view context to persistent store: \(error)")
             }
+        } else {
+            print("Data - Save view context - No changes to save")
         }
     }
 }
