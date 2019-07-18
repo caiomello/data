@@ -24,4 +24,8 @@ extension JSONDecoder {
             userInfo[CodingUserInfoKey.managedObjectContext] = context
         }
     }
+
+    public func managedObjectContext() -> NSManagedObjectContext? {
+        return userInfo[CodingUserInfoKey.managedObjectContext] as? NSManagedObjectContext
+    }
 }

@@ -65,6 +65,12 @@ public struct NetworkingService {
 
                 let _ = try decoder.decode(T.self, from: data)
 
+                guard let managedObjectContext = decoder.managedObjectContext() else {
+                    fatalError("Decoding failed - No managed object context")
+                }
+
+                try managedObjectContext.save()
+
                 DispatchQueue.main.async {
                     completion(.success(nil))
                 }
