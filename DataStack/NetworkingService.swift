@@ -71,6 +71,8 @@ public struct NetworkingService {
 
                 try managedObjectContext.save()
 
+                self.log(request: request, type: .success)
+
                 DispatchQueue.main.async {
                     completion(.success(nil))
                 }
