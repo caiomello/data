@@ -50,7 +50,6 @@ extension NotificationService {
                     content.forEach({ self.scheduleNotification(withContent: $0) })
                 }
             case .denied:
-//                self.delegate.disableNotifications() // TODO: check this use case
                 break
             case .notDetermined:
                 break
