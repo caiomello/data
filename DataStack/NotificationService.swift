@@ -16,13 +16,13 @@ public protocol NotificationServiceDelegate {
 }
 
 public struct NotificationContent {
-    let imageFilePath: String?
-    let title: String
-    let subtitle: String?
-    let body: String?
-    let date: Date
-    let identifier: String
-    let userInfo: [AnyHashable: Any]
+    public let imageFilePath: String?
+    public let title: String
+    public let subtitle: String?
+    public let body: String?
+    public let date: Date
+    public let identifier: String
+    public let userInfo: [AnyHashable: Any]
 }
 
 public struct NotificationService {
