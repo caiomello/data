@@ -37,9 +37,11 @@ public struct NotificationContent {
 
 public struct NotificationService {
     private let delegate: NotificationServiceDelegate
+    private let debugMode: Bool
 
-    public init(delegate: NotificationServiceDelegate) {
+    public init(delegate: NotificationServiceDelegate, debugMode: Bool = false) {
         self.delegate = delegate
+        self.debugMode = debugMode
     }
 }
 
@@ -89,11 +91,16 @@ extension NotificationService {
         var calendar = Calendar.current
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
 
-        var components = calendar.dateComponents([.hour, .day, .month, .year], from: content.date)
-        components.hour = delegate.notificationTime
-
-//        Test components (fire 2s from now)
-//        let components = Calendar.current.dateComponents([.second, .minute, .hour, .day, .month, .year], from: Date().addingTimeInterval(2))
+        let components: DateComponents = {
+            if debugMode {
+//                Test components (fire 2s from now)
+                return Calendar.current.dateComponents([.second, .minute, .hour, .day, .month, .year], from: Date().addingTimeInterval(2))
+            } else {
+                var components = calendar.dateComponents([.hour, .day, .month, .year], from: content.date)
+                components.hour = delegate.notificationTime
+                return components
+            }
+        }()
 
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
 
