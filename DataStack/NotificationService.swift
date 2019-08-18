@@ -54,20 +54,15 @@ extension NotificationService {
         }
     }
 
-    public func scheduleNotifications(withContent content: [NotificationContent]) {
+    public func getAuthorizationStatus(completion: @escaping (UNAuthorizationStatus) -> Void) {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
-            switch settings.authorizationStatus {
-            case .authorized, .provisional:
-                if self.delegate.notificationsEnabled {
-                    content.forEach({ self.scheduleNotification(withContent: $0) })
-                }
-            case .denied:
-                break
-            case .notDetermined:
-                break
-            @unknown default:
-                break
-            }
+            completion(settings.authorizationStatus)
+        }
+    }
+
+    public func scheduleNotifications(withContent content: [NotificationContent]) {
+        if self.delegate.notificationsEnabled {
+            content.forEach({ self.scheduleNotification(withContent: $0) })
         }
     }
 
