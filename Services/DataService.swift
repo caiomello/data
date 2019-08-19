@@ -1,6 +1,6 @@
 //
-//  DataStack.swift
-//  DataStack
+//  DataService.swift
+//  Services
 //
 //  Created by Caio Mello on August 17, 2017.
 //  Copyright © 2017 Caio Mello. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-public final class DataStack {
+public final class DataService {
 	private let model: String
     private let cloudKitContainer: String
 

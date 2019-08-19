@@ -1,6 +1,6 @@
 //
 //  NotificationService.swift
-//  DataStack
+//  Services
 //
 //  Created by Caio Mello on 8/17/19.
 //  Copyright © 2019 Caio Mello. All rights reserved.

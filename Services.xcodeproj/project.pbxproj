@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2500394D1F46141E000EAADC /* DataStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250039431F46141E000EAADC /* DataStack.framework */; };
-		2500395E1F461453000EAADC /* DataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2500395D1F461453000EAADC /* DataStack.swift */; };
+		2500394D1F46141E000EAADC /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250039431F46141E000EAADC /* Services.framework */; };
+		2500395E1F461453000EAADC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2500395D1F461453000EAADC /* DataService.swift */; };
 		2524EEF822C59C0D00303ABC /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524EEF722C59C0D00303ABC /* NSManagedObject+Extensions.swift */; };
 		252DB61B22C57DE1000A332F /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252DB61A22C57DE1000A332F /* JSONDecoder+Extensions.swift */; };
 		252DB61D22C57DF5000A332F /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252DB61C22C57DF5000A332F /* URL+Extensions.swift */; };
@@ -30,11 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		250039431F46141E000EAADC /* DataStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		250039431F46141E000EAADC /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250039471F46141E000EAADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2500394C1F46141E000EAADC /* DataStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2500394C1F46141E000EAADC /* ServicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		250039531F46141E000EAADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2500395D1F461453000EAADC /* DataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStack.swift; sourceTree = "<group>"; };
+		2500395D1F461453000EAADC /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2524EEF722C59C0D00303ABC /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
 		252DB61A22C57DE1000A332F /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		252DB61C22C57DF5000A332F /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2500394D1F46141E000EAADC /* DataStack.framework in Frameworks */,
+				2500394D1F46141E000EAADC /* Services.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +67,8 @@
 		250039391F46141D000EAADC = {
 			isa = PBXGroup;
 			children = (
-				250039451F46141E000EAADC /* DataStack */,
-				250039501F46141E000EAADC /* DataStackTests */,
+				250039451F46141E000EAADC /* Services */,
+				250039501F46141E000EAADC /* ServicesTests */,
 				250039441F46141E000EAADC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,30 +76,30 @@
 		250039441F46141E000EAADC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				250039431F46141E000EAADC /* DataStack.framework */,
-				2500394C1F46141E000EAADC /* DataStackTests.xctest */,
+				250039431F46141E000EAADC /* Services.framework */,
+				2500394C1F46141E000EAADC /* ServicesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		250039451F46141E000EAADC /* DataStack */ = {
+		250039451F46141E000EAADC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2500395D1F461453000EAADC /* DataStack.swift */,
+				2500395D1F461453000EAADC /* DataService.swift */,
 				25EFA06E22E11215004B7B17 /* NetworkingService.swift */,
 				25E36B402308ACC000AF03AE /* NotificationService.swift */,
 				25E36B432308AD1100AF03AE /* Extensions */,
 				250039471F46141E000EAADC /* Info.plist */,
 			);
-			path = DataStack;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		250039501F46141E000EAADC /* DataStackTests */ = {
+		250039501F46141E000EAADC /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
 				250039531F46141E000EAADC /* Info.plist */,
 			);
-			path = DataStackTests;
+			path = ServicesTests;
 			sourceTree = "<group>";
 		};
 		25E36B432308AD1100AF03AE /* Extensions */ = {
@@ -128,9 +128,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		250039421F46141E000EAADC /* DataStack */ = {
+		250039421F46141E000EAADC /* Services */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 250039571F46141E000EAADC /* Build configuration list for PBXNativeTarget "DataStack" */;
+			buildConfigurationList = 250039571F46141E000EAADC /* Build configuration list for PBXNativeTarget "Services" */;
 			buildPhases = (
 				2500393E1F46141E000EAADC /* Sources */,
 				2500393F1F46141E000EAADC /* Frameworks */,
@@ -141,14 +141,14 @@
 			);
 			dependencies = (
 			);
-			name = DataStack;
+			name = Services;
 			productName = DataStack;
-			productReference = 250039431F46141E000EAADC /* DataStack.framework */;
+			productReference = 250039431F46141E000EAADC /* Services.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2500394B1F46141E000EAADC /* DataStackTests */ = {
+		2500394B1F46141E000EAADC /* ServicesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2500395A1F46141E000EAADC /* Build configuration list for PBXNativeTarget "DataStackTests" */;
+			buildConfigurationList = 2500395A1F46141E000EAADC /* Build configuration list for PBXNativeTarget "ServicesTests" */;
 			buildPhases = (
 				250039481F46141E000EAADC /* Sources */,
 				250039491F46141E000EAADC /* Frameworks */,
@@ -159,9 +159,9 @@
 			dependencies = (
 				2500394F1F46141E000EAADC /* PBXTargetDependency */,
 			);
-			name = DataStackTests;
+			name = ServicesTests;
 			productName = DataStackTests;
-			productReference = 2500394C1F46141E000EAADC /* DataStackTests.xctest */;
+			productReference = 2500394C1F46141E000EAADC /* ServicesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2500393D1F46141D000EAADC /* Build configuration list for PBXProject "DataStack" */;
+			buildConfigurationList = 2500393D1F46141D000EAADC /* Build configuration list for PBXProject "Services" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -198,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				250039421F46141E000EAADC /* DataStack */,
-				2500394B1F46141E000EAADC /* DataStackTests */,
+				250039421F46141E000EAADC /* Services */,
+				2500394B1F46141E000EAADC /* ServicesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +233,7 @@
 				25E36B412308ACC000AF03AE /* NotificationService.swift in Sources */,
 				252DB61F22C57E01000A332F /* URLRequest+Extensions.swift in Sources */,
 				252DB62122C57E8C000A332F /* Endpoint.swift in Sources */,
-				2500395E1F461453000EAADC /* DataStack.swift in Sources */,
+				2500395E1F461453000EAADC /* DataService.swift in Sources */,
 				2524EEF822C59C0D00303ABC /* NSManagedObject+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +250,7 @@
 /* Begin PBXTargetDependency section */
 		2500394F1F46141E000EAADC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 250039421F46141E000EAADC /* DataStack */;
+			target = 250039421F46141E000EAADC /* Services */;
 			targetProxy = 2500394E1F46141E000EAADC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -384,10 +384,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DataStack/Info.plist;
+				INFOPLIST_FILE = Services/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caiomello.DataStack;
+				PRODUCT_BUNDLE_IDENTIFIER = caiomello.Services;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -408,10 +408,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DataStack/Info.plist;
+				INFOPLIST_FILE = Services/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caiomello.DataStack;
+				PRODUCT_BUNDLE_IDENTIFIER = caiomello.Services;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -425,9 +425,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7Q8BV53NMG;
-				INFOPLIST_FILE = DataStackTests/Info.plist;
+				INFOPLIST_FILE = ServicesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caiomello.DataStackTests;
+				PRODUCT_BUNDLE_IDENTIFIER = caiomello.ServicesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,9 +439,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 7Q8BV53NMG;
-				INFOPLIST_FILE = DataStackTests/Info.plist;
+				INFOPLIST_FILE = ServicesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = caiomello.DataStackTests;
+				PRODUCT_BUNDLE_IDENTIFIER = caiomello.ServicesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,7 +451,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2500393D1F46141D000EAADC /* Build configuration list for PBXProject "DataStack" */ = {
+		2500393D1F46141D000EAADC /* Build configuration list for PBXProject "Services" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				250039551F46141E000EAADC /* Debug */,
@@ -460,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		250039571F46141E000EAADC /* Build configuration list for PBXNativeTarget "DataStack" */ = {
+		250039571F46141E000EAADC /* Build configuration list for PBXNativeTarget "Services" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				250039581F46141E000EAADC /* Debug */,
@@ -469,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2500395A1F46141E000EAADC /* Build configuration list for PBXNativeTarget "DataStackTests" */ = {
+		2500395A1F46141E000EAADC /* Build configuration list for PBXNativeTarget "ServicesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2500395B1F46141E000EAADC /* Debug */,

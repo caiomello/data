@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "250039421F46141E000EAADC"
-               BuildableName = "DataStack.framework"
-               BlueprintName = "DataStack"
-               ReferencedContainer = "container:DataStack.xcodeproj">
+               BuildableName = "Services.framework"
+               BlueprintName = "Services"
+               ReferencedContainer = "container:Services.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,9 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "250039421F46141E000EAADC"
-            BuildableName = "DataStack.framework"
-            BlueprintName = "DataStack"
-            ReferencedContainer = "container:DataStack.xcodeproj">
+            BuildableName = "Services.framework"
+            BlueprintName = "Services"
+            ReferencedContainer = "container:Services.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -42,9 +42,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2500394B1F46141E000EAADC"
-               BuildableName = "DataStackTests.xctest"
-               BlueprintName = "DataStackTests"
-               ReferencedContainer = "container:DataStack.xcodeproj">
+               BuildableName = "ServicesTests.xctest"
+               BlueprintName = "ServicesTests"
+               ReferencedContainer = "container:Services.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "250039421F46141E000EAADC"
-            BuildableName = "DataStack.framework"
-            BlueprintName = "DataStack"
-            ReferencedContainer = "container:DataStack.xcodeproj">
+            BuildableName = "Services.framework"
+            BlueprintName = "Services"
+            ReferencedContainer = "container:Services.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "250039421F46141E000EAADC"
-            BuildableName = "DataStack.framework"
-            BlueprintName = "DataStack"
-            ReferencedContainer = "container:DataStack.xcodeproj">
+            BuildableName = "Services.framework"
+            BlueprintName = "Services"
+            ReferencedContainer = "container:Services.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
