@@ -35,15 +35,12 @@ public struct NetworkingService {
 
                 self.log(request: request, type: .success)
 
-                DispatchQueue.main.async {
-                    completion(.success(object))
-                }
+                completion(.success(object))
+
             } catch {
                 self.log(request: request, type: .failure(error))
 
-                DispatchQueue.main.async {
-                    completion(.failure(error))
-                }
+                completion(.failure(error))
             }
         }
 
