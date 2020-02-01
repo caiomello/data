@@ -53,44 +53,6 @@ public struct NetworkingService {
 
         return task
     }
-
-    @discardableResult public func requestManagedObject<T: Decodable>(_ type: T.Type, endpoint: Endpoint, decoder: JSONDecoder, completion: @escaping (Result<Void?, Error>) -> Void) -> URLSessionDataTask? {
-        let request = URLRequest(endpoint: endpoint)
-
-        let task = session.dataTask(with: request) { (data, response, error) in
-            do {
-                if error != nil { throw NetworkingError.connectionError }
-
-                guard let data = data else { throw NetworkingError.noData }
-
-                let _ = try decoder.decode(T.self, from: data)
-
-                guard let managedObjectContext = decoder.managedObjectContext() else {
-                    fatalError("Decoding failed - No managed object context")
-                }
-
-                try managedObjectContext.save()
-
-                self.log(request: request, type: .success)
-
-                DispatchQueue.main.async {
-                    completion(.success(nil))
-                }
-            } catch {
-                self.log(request: request, type: .failure(error))
-
-                DispatchQueue.main.async {
-                    completion(.failure(error))
-                }
-            }
-        }
-
-        log(request: request, type: .requestFired)
-
-        task.resume()
-
-        return task
-    }
 }
 
 // MARK: - Logging
