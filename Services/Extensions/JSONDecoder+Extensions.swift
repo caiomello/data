@@ -14,10 +14,12 @@ extension JSONDecoder {
         self.init()
 
         if let dateFormat = dateFormat {
-            let dateFormatter = DateFormatter()
-            dateFormatter.isLenient = true
-            dateFormatter.dateFormat = dateFormat
-            dateDecodingStrategy = .formatted(dateFormatter)
+            let formatter = DateFormatter()
+            formatter.dateFormat = dateFormat
+            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            formatter.isLenient = true
+            dateDecodingStrategy = .formatted(formatter)
         }
 
         if let context = context {
