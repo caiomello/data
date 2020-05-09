@@ -69,11 +69,11 @@ extension NetworkingService {
 
         switch type {
         case .requestFired:
-            print(log)
+            print("🚀 \(log)")
         case .success:
-            print("\(log) - Success")
+            print("✅ \(log)")
         case .failure(let error):
-            print("\(log) - Failure: \(error)")
+            print("⛔️ \(log) - \(error)")
         }
     }
 
