@@ -63,9 +63,7 @@ extension NetworkingService {
 
     // swiftlint:disable localizable_strings
     private func log(request: URLRequest, type: LoggingType) {
-        if isDebug() {
-            return
-        }
+        guard isDebug(), loggingEnabled { return }
 
         let log = "[\(request.httpMethod!)] \(request.url!.absoluteString)"
 
