@@ -83,15 +83,12 @@ extension NotificationService {
             notification.attachments = [attachment]
         }
 
-        var calendar = Calendar.current
-        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-
         let components: DateComponents = {
             if debugMode {
 //                Test components (fire 2s from now)
                 return Calendar.current.dateComponents([.second, .minute, .hour, .day, .month, .year], from: Date().addingTimeInterval(2))
             } else {
-                var components = calendar.dateComponents([.hour, .day, .month, .year], from: content.date)
+                var components = Calendar.current.dateComponents([.hour, .day, .month, .year], from: content.date)
                 components.hour = delegate.notificationTime
                 return components
             }
